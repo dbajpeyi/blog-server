@@ -12,6 +12,6 @@ import json
 def test_landing_page(app):
     """Test /api/v1/todos"""
 
-    resp =  app.client.get("/api/v1/default")
+    resp =  app.client.get("/api/default")
     assert resp.status_code == 200
     assert resp.content_type == 'application/json'
