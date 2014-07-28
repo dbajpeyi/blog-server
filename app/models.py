@@ -30,8 +30,6 @@ class Post(Document):
     def __str__(self):
         return self.title
 
-
-
 class Comment(Document):
     text        = StringField(max_length=255, required=True) 
     user        = ReferenceField(User, required=True)
