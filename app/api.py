@@ -48,5 +48,15 @@ class PostListView(JsonBaseView):
         for post in Post.objects():
             resp.append(self.post_as_dict(post))
         return self.send_json({"posts": resp})
+
+class SavePostView(JsonBaseView):
+    """
+        Save a blog post, which will have a user, title and content
+    """
+
+    def post(self):
+        args = parser.parse_args()
+        return self.send_json({"status": "ok"})
+        
         
 

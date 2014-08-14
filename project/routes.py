@@ -11,5 +11,6 @@ def routes_init(app):
 
     api.add_resource(DefaultResponseView, "/api/default")
     api.add_resource(PostListView, "/api/posts")
+    api.add_resource(SavePostView, "/api/post/save", methods=['GET','POST'])
 
     return api
