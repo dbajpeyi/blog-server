@@ -18,8 +18,8 @@ class Post(Document):
     """A combination of title , content and author"""
     
     author      = ReferenceField(User, required=True)
-    content 	= StringField(max_length=10000, required=True)
-    title       = StringField(max_length=250, required=True)
+    content 	= StringField(max_length=100000, required=True)
+    title       = StringField(max_length=250, required=True, unique=True)
     created     = DateTimeField(default=datetime.datetime.now(), required=True)
     completed 	= BooleanField(default=False)
 
